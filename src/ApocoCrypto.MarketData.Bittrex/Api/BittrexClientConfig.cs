@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 
-namespace ApocoCrypto.Bittrex.Client
+namespace ApocoCrypto.MarketData.Bittrex.Api
 {
     public class BittrexClientConfig
     {

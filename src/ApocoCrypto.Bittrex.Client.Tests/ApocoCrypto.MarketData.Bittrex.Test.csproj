@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ApocoCrypto.Bittrex.Client\ApocoCrypto.Bittrex.Client.csproj" />
+    <ProjectReference Include="..\ApocoCrypto.MarketData.Bittrex\ApocoCrypto.MarketData.Bittrex.csproj" />
   </ItemGroup>
 
 </Project>

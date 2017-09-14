@@ -1,11 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApocoCrypto.Bittrex.Client", "ApocoCrypto.Bittrex.Client\ApocoCrypto.Bittrex.Client.csproj", "{F2D062F6-FBEF-49CA-B65B-A9A31E2C0D30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApocoCrypto.MarketData.Bittrex.Test", "ApocoCrypto.Bittrex.Client.Tests\ApocoCrypto.MarketData.Bittrex.Test.csproj", "{A6E34F57-2CFE-4F74-A3F6-5A7F4F6AD90A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApocoCrypto.Bittrex.Client.Tests", "ApocoCrypto.Bittrex.Client.Tests\ApocoCrypto.Bittrex.Client.Tests.csproj", "{A6E34F57-2CFE-4F74-A3F6-5A7F4F6AD90A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApocoCrypto.CoinGuard.Wpf", "ApocoCrypto.CoinGuard.Wpf\ApocoCrypto.CoinGuard.Wpf.csproj", "{BE876EDC-3320-462C-99C9-4CD75A49EA99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApocoCrypto.Web.Api", "ApocoCrypto.Web.Api\ApocoCrypto.Web.Api.csproj", "{AF70270B-84FE-4A61-8390-A7F12C1523BC}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E75BCD69-C11B-44D9-94E5-DE86D244CAD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApocoCrypto.Monitoring", "ApocoCrypto.Monitoring\ApocoCrypto.Monitoring.csproj", "{A47D1247-A0CE-4545-8185-2CF70672896F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApocoCrypto.MarketData", "ApocoCrypto.MarketData\ApocoCrypto.MarketData.csproj", "{68FE7879-166C-411E-A64E-D494ECA49EF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApocoCrypto.MarketData.Bittrex", "ApocoCrypto.MarketData.Bittrex\ApocoCrypto.MarketData.Bittrex.csproj", "{894F8559-2E2C-4647-983E-2DA2A185F96F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +23,34 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F2D062F6-FBEF-49CA-B65B-A9A31E2C0D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2D062F6-FBEF-49CA-B65B-A9A31E2C0D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2D062F6-FBEF-49CA-B65B-A9A31E2C0D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2D062F6-FBEF-49CA-B65B-A9A31E2C0D30}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A6E34F57-2CFE-4F74-A3F6-5A7F4F6AD90A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6E34F57-2CFE-4F74-A3F6-5A7F4F6AD90A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6E34F57-2CFE-4F74-A3F6-5A7F4F6AD90A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6E34F57-2CFE-4F74-A3F6-5A7F4F6AD90A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE876EDC-3320-462C-99C9-4CD75A49EA99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE876EDC-3320-462C-99C9-4CD75A49EA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE876EDC-3320-462C-99C9-4CD75A49EA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE876EDC-3320-462C-99C9-4CD75A49EA99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF70270B-84FE-4A61-8390-A7F12C1523BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF70270B-84FE-4A61-8390-A7F12C1523BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF70270B-84FE-4A61-8390-A7F12C1523BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF70270B-84FE-4A61-8390-A7F12C1523BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E75BCD69-C11B-44D9-94E5-DE86D244CAD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E75BCD69-C11B-44D9-94E5-DE86D244CAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E75BCD69-C11B-44D9-94E5-DE86D244CAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E75BCD69-C11B-44D9-94E5-DE86D244CAD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A47D1247-A0CE-4545-8185-2CF70672896F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A47D1247-A0CE-4545-8185-2CF70672896F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A47D1247-A0CE-4545-8185-2CF70672896F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A47D1247-A0CE-4545-8185-2CF70672896F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68FE7879-166C-411E-A64E-D494ECA49EF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68FE7879-166C-411E-A64E-D494ECA49EF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68FE7879-166C-411E-A64E-D494ECA49EF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68FE7879-166C-411E-A64E-D494ECA49EF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{894F8559-2E2C-4647-983E-2DA2A185F96F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{894F8559-2E2C-4647-983E-2DA2A185F96F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{894F8559-2E2C-4647-983E-2DA2A185F96F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{894F8559-2E2C-4647-983E-2DA2A185F96F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

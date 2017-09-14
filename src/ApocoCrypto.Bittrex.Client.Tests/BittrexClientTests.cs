@@ -1,7 +1,8 @@
 ﻿using System.Threading.Tasks;
+using ApocoCrypto.MarketData.Bittrex.Api;
 using Xunit;
 
-namespace ApocoCrypto.Bittrex.Client.Tests
+namespace ApocoCrypto.MarketData.Bittrex.Test
 {
     public class BittrexClientTests
     {
@@ -16,56 +17,50 @@ namespace ApocoCrypto.Bittrex.Client.Tests
         public async Task ShouldGetCurrencies()
         {
             var response = await _client.GetCurrencies();
-
-            Assert.True(response.Success, response.Message);
-            Assert.True(response.Result.Count > 0);
+            
+            Assert.True(response.Count > 0);
         }
 
         [Fact]
         public async Task ShouldGetMarkets()
         {
             var response = await _client.GetMarkets();
-
-            Assert.True(response.Success, response.Message);
-            Assert.True(response.Result.Count > 0);
+            
+            Assert.True(response.Count > 0);
         }
 
         [Fact]
         public async Task ShouldGetTicker()
         {
             var response = await _client.GetTicker("BTC-ETH");
-
-            Assert.True(response.Success, response.Message);
-            Assert.True(response.Result != null);
+            
+            Assert.True(response != null);
         }
 
         [Fact]
         public async Task ShouldGetMarketSummaries()
         {
             var response = await _client.GetMarketSummaries();
-
-            Assert.True(response.Success, response.Message);
-            Assert.True(response.Result.Count > 0);
+            
+            Assert.True(response.Count > 0);
         }
 
         [Fact]
         public async Task ShouldGetMarketSummary()
         {
             var response = await _client.GetMarketSummary("BTC-ETH");
-
-            Assert.True(response.Success, response.Message);
-            Assert.True(response.Result != null);
+            
+            Assert.True(response != null);
         }
 
         [Fact]
         public async Task GetFullOrderBook()
         {
             var response = await _client.GetFullOrderBook("BTC-ETH");
-
-            Assert.True(response.Success, response.Message);
-            Assert.True(response.Result != null);
-            Assert.True(response.Result.Buy.Count > 0);
-            Assert.True(response.Result.Sell.Count > 0);
+            
+            Assert.True(response != null);
+            Assert.True(response.Buy.Count > 0);
+            Assert.True(response.Sell.Count > 0);
         }
 
         [Theory]
@@ -74,18 +69,16 @@ namespace ApocoCrypto.Bittrex.Client.Tests
         public async Task GetOrderBook(string type)
         {
             var response = await _client.GetOrderBook("BTC-ETH", type);
-
-            Assert.True(response.Success, response.Message);
-            Assert.True(response.Result.Count > 0);
+            
+            Assert.True(response.Count > 0);
         }
 
         [Fact]
         public async Task GetMarketHistory()
         {
             var response = await _client.GetMarketHistory("BTC-ETH");
-
-            Assert.True(response.Success, response.Message);
-            Assert.True(response.Result.Count > 0);
+            
+            Assert.True(response.Count > 0);
         }
 
         [Theory]
@@ -94,9 +87,8 @@ namespace ApocoCrypto.Bittrex.Client.Tests
         public async Task GetTicks(string tickInterval)
         {
             var response = await _client.GetTicks("BTC-ETH", tickInterval);
-
-            Assert.True(response.Success, response.Message);
-            Assert.True(response.Result.Count > 0);
+            
+            Assert.True(response.Count > 0);
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ApocoCrypto.Bittrex.Client.Response
+namespace ApocoCrypto.MarketData.Bittrex.Wire
 {
-    public class MarketSummary
+    public class MarketSummary : IMarketSummary
     {
         public string MarketName { get; set; }
 

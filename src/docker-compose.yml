@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  apococrypto.web.api:
+    image: apococrypto.web.api
+    build:
+      context: ./ApocoCrypto.Web.Api
+      dockerfile: Dockerfile
